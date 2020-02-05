@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+</head>
+<body>
+<center>
+	<svg id="svg" height="300" width="300" style="margin-top: 100px">
+		<line x1="0" x2="300" y1="100" y2="100" style="stroke-width: 4; stroke: black"/>
+		<line x1="0" x2="300" y1="200" y2="200" style="stroke-width: 4; stroke: black"/>
+		<line x1="100" x2="100" y1="0" y2="300" style="stroke-width: 4; stroke: black"/>
+		<line x1="200" x2="200" y1="0" y2="300" style="stroke-width: 4; stroke: black"/>
+
+		<defs>
+			<g id="cross">
+				<line x1="20" x2="80" y1="20" y2="80" style="stroke-width:5;stroke:red;"/>
+				<line x1="20" x2="80" y1="80" y2="20" style="stroke-width:5;stroke:red;"/>
+			</g>
+		</defs>
+
+		<use x="0" y="0" id="X00" xlink:href="#cross"/>
+		<use x="100" y="0" id="X01" xlink:href="#cross"/>
+		<use x="200" y="0" id="X02" xlink:href="#cross"/>
+		<use x="0" y="100" id="X10" xlink:href="#cross"/>
+		<use x="100" y="100" id="X11" xlink:href="#cross"/>
+		<use x="200" y="100" id="X12" xlink:href="#cross"/>
+		<use x="0" y="200" id="X20" xlink:href="#cross"/>
+		<use x="100" y="200" id="X21" xlink:href="#cross"/>
+		<use x="200" y="200" id="X22" xlink:href="#cross"/>
+
+		<circle cx="50" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none" id="O00"/>
+		<circle cx="150" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none" id="O01"/>
+		<circle cx="250" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none" id="O02"/>
+		<circle cx="50" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none" id="O10"/>
+		<circle cx="150" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none" id="O11"/>
+		<circle cx="250" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none" id="O12"/>
+		<circle cx="50" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none" id="O20"/>
+		<circle cx="150" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none" id="O21"/>
+		<circle cx="250" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none" id="O22"/>
+	</svg>
+	
+	<h1>Welcome To Tic Tac Toe</h1>
+	<div id="info" style="margin-top: 50px">
+		<p>You are 'X' (cross) and computer will be 'O' (circle)</p>
+		<p>Please take your turn. Select any place to put cross</p>
+	</div>
+</center>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
