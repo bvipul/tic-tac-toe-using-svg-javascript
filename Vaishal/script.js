@@ -34,10 +34,27 @@ function setBoxValue(row, column, value) {
 	}
 }
 
+function computerTurn() {
+	for (var i=0; i<3; ++i){
+		for (var j=0; j<3; ++j){
+			if (stateOfBoard[i][j] === ' '){
+				setBoxValue(i, j, 'O');
+				currentPlayer = 'X';
+				$("#info").html("Please take your turn. Select any place to put cross.");
+				return;
+			}
+		}	
+	}
+
+
+}
+
 function markSpot(row, column) {
 	if (stateOfBoard[row][column] === ' ' && currentPlayer === 'X'){
 		currentPlayer = 'O';
 		setBoxValue(row, column, 'X');
+		$("#info").html("Wait till the computer takes it turn.");
+		setTimeout(computerTurn, 500);
 	} else if(stateOfBoard[row][column] !== ' ') {
 		alert("Please select empty spot");
 	}
