@@ -35,26 +35,77 @@ function setBoxValue(row, column, value) {
 }
 
 function computerTurn() {
+	if (currentPlayer !== 'O'){return;}
+
 	for (var i=0; i<3; ++i){
 		for (var j=0; j<3; ++j){
 			if (stateOfBoard[i][j] === ' '){
 				setBoxValue(i, j, 'O');
+				checkResult();
 				currentPlayer = 'X';
 				$("#info").html("Please take your turn. Select any place to put cross.");
 				return;
 			}
 		}	
 	}
+}
 
+function checkResult() {
+	var winner = getTheWinner();
 
+	if (winner === 'X'){
+		alert("Congratulations!\nYou Win!");
+	}
+	if (winner === 'O'){
+		alert("Game Over!\nYou Lose!");
+	}
+	if (winner === 'tie'){
+		alert("Game Over!\nits a tie.");		
+	}
+
+	if(winner !== "continue") {
+		currentPlayer = ' ';
+		resetBoard();
+	}
+}
+
+function getTheWinner() {
+	var anyEmptyValue = false;
+
+	for (var i=0; i<3; ++i){
+		if(stateOfBoard[i].includes(' ')) {
+			anyEmptyValue = true;
+		}
+
+		if (stateOfBoard[i][0] !== ' ' && stateOfBoard[i][0] === stateOfBoard[i][1] && stateOfBoard[i][0] === stateOfBoard[i][2]){
+			return stateOfBoard[i][0];
+		}
+		if (stateOfBoard[0][i] !== ' ' && stateOfBoard[0][i] === stateOfBoard[1][i] && stateOfBoard[0][i] === stateOfBoard[2][i]){
+			return stateOfBoard[0][i];
+		}
+	}
+
+	if (stateOfBoard[1][1] !== ' '){
+		if ((stateOfBoard[0][0] === stateOfBoard[1][1] && stateOfBoard[2][2] === stateOfBoard[1][1]) ||
+			(stateOfBoard[0][2] === stateOfBoard[1][1] && stateOfBoard[2][0] === stateOfBoard[1][1])){
+			return stateOfBoard[1][1];
+		}
+	}
+
+	if(anyEmptyValue) {
+		return 'continue';
+	} else {
+		return 'tie';
+	}
 }
 
 function markSpot(row, column) {
 	if (stateOfBoard[row][column] === ' ' && currentPlayer === 'X'){
 		currentPlayer = 'O';
 		setBoxValue(row, column, 'X');
+		checkResult();
 		$("#info").html("Wait till the computer takes it turn.");
-		setTimeout(computerTurn, 500);
+		setTimeout(computerTurn, 1000);
 	} else if(stateOfBoard[row][column] !== ' ') {
 		alert("Please select empty spot");
 	}
