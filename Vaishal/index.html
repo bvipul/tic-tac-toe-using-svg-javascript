@@ -18,31 +18,31 @@
 			</g>
 		</defs>
 
-		<use x="0" y="0" id="X00" xlink:href="#cross"/>
-		<use x="100" y="0" id="X01" xlink:href="#cross"/>
-		<use x="200" y="0" id="X02" xlink:href="#cross"/>
-		<use x="0" y="100" id="X10" xlink:href="#cross"/>
-		<use x="100" y="100" id="X11" xlink:href="#cross"/>
-		<use x="200" y="100" id="X12" xlink:href="#cross"/>
-		<use x="0" y="200" id="X20" xlink:href="#cross"/>
-		<use x="100" y="200" id="X21" xlink:href="#cross"/>
-		<use x="200" y="200" id="X22" xlink:href="#cross"/>
+		<use x="0" y="0" id="X00" xlink:href="#cross" style="display: none;"/>
+		<use x="100" y="0" id="X01" xlink:href="#cross" style="display: none;"/>
+		<use x="200" y="0" id="X02" xlink:href="#cross" style="display: none;"/>
+		<use x="0" y="100" id="X10" xlink:href="#cross" style="display: none;"/>
+		<use x="100" y="100" id="X11" xlink:href="#cross" style="display: none;"/>
+		<use x="200" y="100" id="X12" xlink:href="#cross" style="display: none;"/>
+		<use x="0" y="200" id="X20" xlink:href="#cross" style="display: none;"/>
+		<use x="100" y="200" id="X21" xlink:href="#cross" style="display: none;"/>
+		<use x="200" y="200" id="X22" xlink:href="#cross" style="display: none;"/>
 
-		<circle cx="50" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none" id="O00"/>
-		<circle cx="150" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none" id="O01"/>
-		<circle cx="250" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none" id="O02"/>
-		<circle cx="50" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none" id="O10"/>
-		<circle cx="150" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none" id="O11"/>
-		<circle cx="250" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none" id="O12"/>
-		<circle cx="50" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none" id="O20"/>
-		<circle cx="150" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none" id="O21"/>
-		<circle cx="250" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none" id="O22"/>
+		<circle cx="50" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O00"/>
+		<circle cx="150" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O01"/>
+		<circle cx="250" cy="50" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O02"/>
+		<circle cx="50" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O10"/>
+		<circle cx="150" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O11"/>
+		<circle cx="250" cy="150" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O12"/>
+		<circle cx="50" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O20"/>
+		<circle cx="150" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O21"/>
+		<circle cx="250" cy="250" r="40" style="stroke-width:5;stroke:black;fill:none; display: none;" id="O22"/>
 	</svg>
 	
 	<h1>Welcome To Tic Tac Toe</h1>
-	<div id="info" style="margin-top: 50px">
+	<div style="margin-top: 50px">
 		<p>You are 'X' (cross) and computer will be 'O' (circle)</p>
-		<p>Please take your turn. Select any place to put cross</p>
+		<p id="info">To start the game, click anywhere on board</p>
 	</div>
 </center>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
