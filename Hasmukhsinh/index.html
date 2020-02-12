@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIC-TOC</title>
+	<script src="script.js" charset="UTF-8"></script>
+</head>
+<body>
+	
+
+	<svg width="300" height="300">
+		<defs>
+			<g id="rect">
+				<rect width="50" height="50" style="fill:rgb(100,100,100);stroke-width:3;stroke:rgb(0,0,255)" />
+			</g>
+		</defs>
+  	<rect width="300" height="300" style="fill:rgb(100,100,100);stroke-width:10;stroke:rgb(0,0,255)" />
+
+	<line x1="0" y1="100" x2="300" y2="100" style="stroke:rgb(0,0,0);stroke-width:2" />
+	<line x1="0" y1="200" x2="300" y2="200" style="stroke:rgb(0,0,0);stroke-width:2" />
+	<line x1="100" y1="0" x2="100" y2="300" style="stroke:rgb(0,0,0);stroke-width:2" />
+	<line x1="200" y1="0" x2="200" y2="300" style="stroke:rgb(0,0,0);stroke-width:2" />
+	
+	<use xlink:href="#rect" x="25" y="25" onclick="selectshape()"/>
+	<use xlink:href="#rect" x="125" y="25" onclick="selectshape()"/>
+	<use xlink:href="#rect" x="225" y="25" onclick="selectshape()"/>
+	
+	<use xlink:href="#rect" x="25" y="125" onclick="selectshape()"/>
+	<use xlink:href="#rect" x="125" y="125" onclick="selectshape()"/>
+	<use xlink:href="#rect" x="225" y="125" onclick="selectshape()"/>
+
+	<use xlink:href="#rect" x="25" y="225" onclick="selectshape()"/>
+	<use xlink:href="#rect" x="125" y="225" onclick="selectshape()"/>
+	<use xlink:href="#rect" x="225" y="225" onclick="selectshape()"/>
+	
+	
+
+	</svg>
+	
+</body>
+</html>
